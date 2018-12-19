@@ -1,38 +1,36 @@
-package com.mayijinfu.test;
-
 public class OperatorTest {
 
 	public static void main(String[] args){
 		OperatorTest test=new OperatorTest();
-		//Ê®½øÖÆÊı×ª2½øÖÆÊı
+		//åè¿›åˆ¶æ•°è½¬2è¿›åˆ¶æ•°
 		System.out.println(test.toBinary(16));
-		//2½øÖÆÊı×ªÊ®½øÖÆÊı  javaÖĞµÄ×Ö½ÚÂëÎª8Î» ¸ßÎ»²¹ÆëÎª0000 1000
+		//2è¿›åˆ¶æ•°è½¬åè¿›åˆ¶æ•°  javaä¸­çš„å­—èŠ‚ç ä¸º8ä½ é«˜ä½è¡¥é½ä¸º0000 1000
 		System.out.println(Integer.parseInt("1000",2));
-		//Î»Òì»òÔËËã·û ^ 
-		//8×ªÎª¶ş½øÖÆÊı0000 1000 £»11¶ş½øÖÆÊı0000 1011 ´Ó¸ßÎ»¿ªÊ¼±È½ÏÏàÍ¬Îª0 ²»Í¬Îª1
-		//Ôò8^11Îª0000 0011 ËùÒÔÎª3
+		//ä½å¼‚æˆ–è¿ç®—ç¬¦ ^
+		//8è½¬ä¸ºäºŒè¿›åˆ¶æ•°0000 1000 ï¼›11äºŒè¿›åˆ¶æ•°0000 1011 ä»é«˜ä½å¼€å§‹æ¯”è¾ƒç›¸åŒä¸º0 ä¸åŒä¸º1
+		//åˆ™8^11ä¸º0000 0011 æ‰€ä»¥ä¸º3
 		System.out.println(test.toBinaryString(8)+";"+test.toBinaryString(11));
 		System.out.println("8^11="+test.toBinaryString(8^11));
-		//Î»ÓëÔËËã·û& 8&11=£¨0000 1000£©
+		//ä½ä¸è¿ç®—ç¬¦& 8&11=ï¼ˆ0000 1000ï¼‰
 		System.out.println("8&11="+test.toBinaryString(8&11));
-		//Î»»òÔËËã·û| 8|11=(0000 1011)
+		//ä½æˆ–è¿ç®—ç¬¦| 8|11=(0000 1011)
 		System.out.println("8|11="+test.toBinaryString(8|11));
-		
-		//Î»·ÇÔËËã·û ~ ~8 =(1111 0111)
+
+		//ä½éè¿ç®—ç¬¦ ~ ~8 =(1111 0111)
 		System.out.println("~8="+test.toBinaryString(~8));
-		
-		/**ÒÆÎ»ÔËËã·û**/
-		//<<×óÒÆÔËËã·û  8<<2  1000   0010 0000
+
+		/**ç§»ä½è¿ç®—ç¬¦**/
+		//<<å·¦ç§»è¿ç®—ç¬¦  8<<2  1000   0010 0000
 		System.out.println("8<<1 is "+test.toBinaryString(8<<1));
 		System.out.println("8<<2 is "+test.toBinaryString(8<<2));
 		System.out.println("8<<3 is "+test.toBinaryString(8<<3));
-		
-		//>>ÓÒÒÆÔËËã·û8>>2 1000 0010
+
+		//>>å³ç§»è¿ç®—ç¬¦8>>2 1000 0010
 		System.out.println("8>>1 is "+test.toBinaryString(8>>1));
 		System.out.println("8>>2 is "+test.toBinaryString(8>>2));
 		System.out.println("8>>3 is "+test.toBinaryString(8>>3));
-		
-		//>>>ÎŞ·ûºÅÓÒÒÆ
+
+		//>>>æ— ç¬¦å·å³ç§»
 		System.out.println("(8) is "+test.toBinaryString(8));
 		System.out.println("(8)>>>4 is "+test.toBinaryString((8)>>>4));
 	}
@@ -44,8 +42,8 @@ public class OperatorTest {
 		}
 		return str;
 	}
-	
-	
+
+
 	public String toBinaryString(int num){
 		return num+" binary "+Integer.toBinaryString(num)+";";
 	}
